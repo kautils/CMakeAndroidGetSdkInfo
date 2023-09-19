@@ -12,6 +12,8 @@ macro(CMakeAndroidGetSdkInfo sdk )
     set(${sdk}.build_tools ${${m}_ANDROID_SDK}/build-tools/${${m}_BUILD_TOOLS_VERSION})
     set(${sdk}.android_jar D:/Android/intelij/platforms/android-${${sdk}.api_level}/android.jar)
     set(${sdk}.aapt2 "${${sdk}.build_tools}/aapt2.exe")
+    set(${sdk}.d8 "${${sdk}.build_tools}/d8")
+    set(${sdk}.dx "${${sdk}.build_tools}/dx")
     
     if(NOT EXISTS ${${m}_ANDROID_SDK})
         message(FATAL_ERROR "invalid android sdk : ${${m}_ANDROID_SDK}")
