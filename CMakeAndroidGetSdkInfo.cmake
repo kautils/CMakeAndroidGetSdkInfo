@@ -15,7 +15,8 @@ macro(CMakeAndroidGetSdkInfo sdk )
     
     set(${sdk}.d8 "${${sdk}.build_tools}/d8")
     set(${sdk}.dx "${${sdk}.build_tools}/dx")
-    if(${CMAKE_HOST_SYSTEM_NAME} EQUAL "Windows")
+    
+    if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
         string(APPEND ${sdk}.d8 ".bat")
         string(APPEND ${sdk}.dx ".bat")
     else()
